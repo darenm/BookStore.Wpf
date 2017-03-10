@@ -93,5 +93,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Business\BookStore.Business.csproj">
+      <Project>{17b72853-1930-46c0-b0ee-6ca83d1f8d32}</Project>
+      <Name>BookStore.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookStore.Data\BookStore.Data.csproj">
+      <Project>{b621dbd4-7583-4d68-be9d-9c7c2dad5812}</Project>
+      <Name>BookStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookStore.Models\BookStore.Models.csproj">
+      <Project>{4d79327a-3b4b-4ea9-aa66-3dc79297cec4}</Project>
+      <Name>BookStore.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

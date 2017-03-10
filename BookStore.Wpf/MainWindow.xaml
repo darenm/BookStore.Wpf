@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStore.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Uber Books - Where Choice Is Over-Rated!" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock FontSize="28"
+                       Margin="12">Uber Books</TextBlock>
+            <ListView x:Name="BookList"
+                      Height="150"
+                      Margin="12">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TextBlock Text="Add Book"
+                       Margin="15,0"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="BookTitle"
+                         Width="150"
+                         Margin="12"/>
+                <Button Click="AddBook"
+                        Content="+" 
+                        Margin="12" Width="46"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
