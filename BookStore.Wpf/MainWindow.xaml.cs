@@ -15,7 +15,7 @@ namespace BookStore.Wpf
         public MainWindow()
         {
             InitializeComponent();
-            this.Loaded += MainWindow_Loaded;
+            Loaded += MainWindow_Loaded;
             _storeLogic = StoreLogic.Instance;
             _booksService = new BooksService();
         }
@@ -27,7 +27,9 @@ namespace BookStore.Wpf
 
         private void AddBook(object sender, RoutedEventArgs e)
         {
-            _booksService.AddBook(new Models.Book { Title = BookTitle.Text });
+            Models.Book book = new Models.Book();
+            book.Title = BookTitle.Text;
+            _booksService.AddBook(book);
             BookTitle.Text = string.Empty;
             BookList.ItemsSource = _storeLogic.GetInventory();
         }
