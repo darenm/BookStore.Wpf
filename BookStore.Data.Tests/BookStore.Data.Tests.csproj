@@ -59,6 +59,10 @@
       <Project>{b621dbd4-7583-4d68-be9d-9c7c2dad5812}</Project>
       <Name>BookStore.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BookStore.Models.Tests\BookStore.Models.Tests.csproj">
+      <Project>{53ba8927-8210-496b-aac3-8a4007f5f175}</Project>
+      <Name>BookStore.Models.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookStore.Models\BookStore.Models.csproj">
       <Project>{4d79327a-3b4b-4ea9-aa66-3dc79297cec4}</Project>
       <Name>BookStore.Models</Name>
